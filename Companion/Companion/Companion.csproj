@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C2F556B-B9AD-4513-8A03-EE2330E4486D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Companion</RootNamespace>
+    <AssemblyName>Companion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Companion.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.UI, Version=4.1.1.3497, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EMGU.CV.4.1.1.3497\lib\net35\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World, Version=4.1.1.3497, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EMGU.CV.4.1.1.3497\lib\net35\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="ImgurSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImgurSharp.1.0.0\lib\portable45-net45+win8+wp8+wpa81\ImgurSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.CognitiveServices.Vision.ComputerVision, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.5.0.0\lib\net452\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.CognitiveServices.Vision.Face, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.CognitiveServices.Vision.Face.2.2.0-preview\lib\net452\Microsoft.Azure.CognitiveServices.Vision.Face.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.2.3.21\lib\net461\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime.Azure, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.Azure.3.3.19\lib\net461\Microsoft.Rest.ClientRuntime.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behaviour\BehaviourAnger.cs" />
+    <Compile Include="Behaviour\BehaviourFear.cs" />
+    <Compile Include="Behaviour\BehaviourHappiness.cs" />
+    <Compile Include="Behaviour\BehaviourManager.cs" />
+    <Compile Include="Behaviour\BehaviourNeutral.cs" />
+    <Compile Include="Behaviour\BehaviourSadness.cs" />
+    <Compile Include="Behaviour\BehaviourSurprise.cs" />
+    <Compile Include="Behaviour\BehaviourWink.cs" />
+    <Compile Include="Behaviour\IBehaviour.cs" />
+    <Compile Include="Companion\CompanionBase.cs" />
+    <Compile Include="Companion\Slime.cs" />
+    <Compile Include="FaceApi\ImageCapture.cs" />
+    <Compile Include="FaceApi\EmotionDetection.cs" />
+    <Compile Include="Enum\Form.cs" />
+    <Compile Include="Enum\Mood.cs" />
+    <Compile Include="Enum\State.cs" />
+    <Compile Include="FaceApi\PersonRecognition.cs" />
+    <Compile Include="FaceApi\Temp.cs" />
+    <Compile Include="Instances.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Struct\BitmapLocation.cs" />
+    <Compile Include="Visual\Animation.cs" />
+    <Compile Include="Visual\Drawing.cs" />
+    <Compile Include="Visual\MatriHolder.cs" />
+    <Compile Include="Visual\ScreenDimenion.cs" />
+    <Compile Include="Visual\Time.cs" />
+    <Compile Include="Visual\Win32.cs" />
+    <Compile Include="Visual\Win32Util.cs" />
+    <Compile Include="Visual\Window.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSScriptControl">
+      <Guid>{0E59F1D2-1FBE-11D0-8FF2-00A0D10038BC}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License-LGPL.txt" />
+    <None Include="Resources\SadFace\sprite_sad5.png" />
+    <None Include="Resources\SadFace\sprite_sad4.png" />
+    <None Include="Resources\SadFace\sprite_sad3.png" />
+    <None Include="Resources\SadFace\sprite_sad2.png" />
+    <None Include="Resources\SadFace\sprite_sad1.png" />
+    <None Include="Resources\SadFace\sprite_sad0.png" />
+    <None Include="Resources\NeutralFace\neutral_slime7.png" />
+    <None Include="Resources\NeutralFace\neutral_slime6.png" />
+    <None Include="Resources\NeutralFace\neutral_slime5.png" />
+    <None Include="Resources\NeutralFace\neutral_slime4.png" />
+    <None Include="Resources\NeutralFace\neutral_slime3.png" />
+    <None Include="Resources\NeutralFace\neutral_slime2.png" />
+    <None Include="Resources\NeutralFace\neutral_slime1.png" />
+    <None Include="Resources\NeutralFace\neutral_slime0.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased14.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased13.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased12.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased11.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased10.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased09.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased08.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased07.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased06.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased05.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased04.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased03.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased02.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased01.png" />
+    <None Include="Resources\FearFace\sprite_scared_emberrased00.png" />
+    <None Include="Resources\HappyFace\sprite_happy5.png" />
+    <None Include="Resources\HappyFace\sprite_happy4.png" />
+    <None Include="Resources\HappyFace\sprite_happy3.png" />
+    <None Include="Resources\HappyFace\sprite_happy2.png" />
+    <None Include="Resources\HappyFace\sprite_happy1.png" />
+    <None Include="Resources\HappyFace\sprite_happy0.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink12.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink11.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink10.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink09.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink08.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink07.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink06.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink05.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink04.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink03.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink02.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink01.png" />
+    <None Include="Resources\WinkyFace\sprite_face_wink00.png" />
+    <None Include="Resources\SurpriseFace\sprite_surprised 6.png" />
+    <None Include="Resources\SurpriseFace\sprite_surprised 5.png" />
+    <None Include="Resources\SurpriseFace\sprite_surprised 4.png" />
+    <None Include="Resources\SurpriseFace\sprite_surprised 3.png" />
+    <None Include="Resources\SurpriseFace\sprite_surprised 2.png" />
+    <None Include="Resources\SurpriseFace\sprite_surprised 1.png" />
+    <None Include="Resources\SurpriseFace\sprite_surprised 0.png" />
+    <None Include="Resources\SlimeBody\Slime left up.png" />
+    <None Include="Resources\SlimeBody\Slime left down.png" />
+    <None Include="Resources\AngryFace\sprite_angry5.png" />
+    <None Include="Resources\AngryFace\sprite_angry4.png" />
+    <None Include="Resources\AngryFace\sprite_angry3.png" />
+    <None Include="Resources\AngryFace\sprite_angry2.png" />
+    <None Include="Resources\AngryFace\sprite_angry1.png" />
+    <None Include="Resources\AngryFace\sprite_angry0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\packages\EMGU.CV.4.1.1.3497\build\EMGU.CV.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EMGU.CV.4.1.1.3497\build\EMGU.CV.targets'))" />
+  </Target>
+  <Import Project="..\packages\EMGU.CV.4.1.1.3497\build\EMGU.CV.targets" Condition="Exists('..\packages\EMGU.CV.4.1.1.3497\build\EMGU.CV.targets')" />
+</Project>
